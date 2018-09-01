@@ -1,0 +1,13 @@
+.inputCard {
+  width: 80%;
+  margin: 1% auto;
+}
+
+.submitButton{
+  text-align: center;
+}
+
+.submissionMemo{
+  resize: none;
+  height: 300px;
+}
