@@ -28,7 +28,7 @@
     "webpack-dev-server": "^2.9.3"
   },
   "dependencies": {
-    "axios": "^0.17.0",
+    "axios": "^0.18.0",
     "babel-plugin-react-css-modules": "^3.3.2",
     "babel-polyfill": "^6.26.0",
     "draft-js": "^0.10.5",

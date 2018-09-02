@@ -1,5 +1,5 @@
 const webpack = require('webpack')
-const DashboardPlugin = require('webpack-dashboard/plugin');
+const DashboardPlugin = require('webpack-dashboard/plugin')
 
 module.exports = {
   entry: ['babel-polyfill', './src/routes.js'],
@@ -56,9 +56,10 @@ module.exports = {
     hot: true,
     historyApiFallback: true,
     host: '0.0.0.0',
-    disableHostCheck: true
+    disableHostCheck: true,
+    proxy: {
+      '/api/*': 'http://0.0.0.0:5000'
+    }
   },
-  plugins: [
-    new DashboardPlugin()
-  ]
+  plugins: [new DashboardPlugin()]
 }

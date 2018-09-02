@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card, Button, CardTitle, CardHeader, Row, Col, Form, FormText, FormGroup, Input } from 'reactstrap'
+import axios from 'axios'
 import './Explanation.css'
 
 class Explanation extends React.Component {
@@ -8,6 +9,17 @@ class Explanation extends React.Component {
     this.state = {
       explanation: ''
     }
+  }
+  onChangeSendData(value) {
+    this.setState({ explanation: value })
+    axios
+      .post('/api/v1/save_explanation', { explanation: value })
+      .then(results => {
+        console.log('success')
+      })
+      .catch(error => {
+        console.log(error)
+      })
   }
   render() {
     return (
@@ -40,7 +52,7 @@ class Explanation extends React.Component {
                     name="text"
                     styleName="explanationMemo"
                     value={this.state.explanation}
-                    onChange={e => this.setState({ explanation: e.target.value })}
+                    onChange={e => this.onChangeSendData(e.target.value)}
                   />
                   <FormText color="muted">データの説明について。マークダウンにしたかったけど、、、</FormText>
                 </FormGroup>
