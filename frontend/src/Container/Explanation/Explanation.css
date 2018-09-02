@@ -1,0 +1,17 @@
+.explanationCard {
+  margin: 1% auto;
+}
+
+.explanationCard p{
+  padding: 10px;
+}
+
+.inputCard {
+  width: 80%;
+  margin: 1% auto;
+}
+
+.explanationMemo{
+  resize: none;
+  height: 300px;
+}

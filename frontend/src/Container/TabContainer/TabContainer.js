@@ -4,6 +4,7 @@ import classnames from 'classnames'
 
 import Leaderboard from '../LeaderBoard/LeaderBoard'
 import Submission from '../Submission/Submission'
+import Explanation from '../Explanation/Explanation'
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -74,7 +75,10 @@ export default class Example extends React.Component {
           </TabPane>
           <TabPane tabId="3">
             <Row>
-              <Col sm="12">結局ここでマークダウン書きたくなるわ</Col>
+              <Col sm="12">
+                ここにやりたいコンペの説明を書く。管理者ロールのときのみ、編集ボタンが出てくる。
+                <Explanation />
+              </Col>
             </Row>
           </TabPane>
         </TabContent>
